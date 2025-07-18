@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-100 min-h-screen">
+  <header class="bg-blue-600 text-white p-4 text-center text-xl font-bold">
+    Weather Forecast Application
+  </header>
+
+  <main class=" mx-auto flex flex-row">
+    <section class="p-4">
+     <label class="block mb-2 font-medium">Enter city name</label>
+      <input id="cityInput" type="text" placeholder="E.g,New york,London,Tokyo" 
+        class="w-full p-2 border border-gray-300 rounded mb-4" >
+      <div class="flex flex-col gap-2 ">
+        <button id="searchBtn" class=" bg-blue-500 text-white  w-48 px-4 py-2 rounded " onclick="getWeather()">Search</button>
+      <h>_______________________ or _____________________</h>
+         <button id="currentBtn" class="bg-gray-700 text-white w-48 px-4 py-2 rounded">Use Current Location</button> 
+        
+        </div>
+    </section>
+
+    <section id="weatherDisplay" class="flex-auto w-max">
+      <div class="bg-blue-600 mt-6 p-4 rounded shadow flex justify-between items-center">
+		<div id="weatherResult">
+          <h2 id="cityDate" class="text-xl font-bold text-white">City Name</h2>
+          <p id="temperature" class="text-white">Temperature: --</p>
+          <p id="humidity" class="text-white">Humidity: --</p>
+          <p id="wind" class="text-white">Wind Speed: --</p>
+        </div>
+        <div class="text-center">
+          <img id="weatherIcon" src="" alt="" class="w-16 h-16 mx-auto">
+          <p id="description" class="text-sm">--</p>
+        </div>
+      </div>
+
+
+      </div>
+
+      <h3 class="mt-6 mb-2 text-lg font-semibold">5-Day Forecast</h3>
+      <div id="" class="flex flex-wrap ">
+		<div id="forecastContainer" class="flex gap-4 rounded text-left text-white">
+  
+			<div class="bg-gray-600 text-white p-4 rounded-md w-40  text-center">
+			<p class="font-semibold">(2024-04-24)</p>
+			<img src="https://img.icons8.com/ios/50/cloud.png " alt="cloudy" class="mx-auto h-8 bg-white" />
+			<p>Temp: </p>
+			<p>Wind: </p>
+			<p>Humidity: </p>
+		  </div>
+		  <div class="bg-gray-600 text-white p-4 rounded-md w-40  text-center">
+			<p class="font-semibold">(2024-04-25)</p>
+			<img src="https://img.icons8.com/ios/50/cloud.png" alt="cloudy" class="mx-auto h-8 bg-white" />
+			<p>Temp: </p>
+			<p>Wind: </p>
+			<p>Humidity: </p>
+		  </div>		  
+		  <div class="bg-gray-600 text-white p-4 rounded-md w-40  text-center">
+			<p class="font-semibold">(2024-04-26)</p>
+			<img src="https://img.icons8.com/ios/50/rain.png" alt="rainy" class="mx-auto h-8 bg-white" />
+			<p>Temp: </p>
+			<p>Wind: </p>
+			<p>Humidity: </p>
+		  </div>
+		  <div class="bg-gray-600 text-white p-4 rounded-md w-40 text-center">
+			<p class="font-semibold">(2024-04-27)</p>
+			<img src="https://img.icons8.com/ios/50/rain.png" alt="rainy" class="mx-auto h-8 bg-white" />
+			<p>Temp: </p>
+			<p>Wind: </p>
+			<p>Humidity: </p>
+		  </div>		  
+		  <div class="bg-gray-600 text-white p-4 rounded-md w-40 text-center">
+			<p class="font-semibold">(2024-04-28)</p>
+			<img src="https://img.icons8.com/ios/50/rain.png" alt="rainy" class="mx-auto h-8 bg-white" />
+			<p>Temp: </p>
+			<p>Wind: </p>
+			<p>Humidity: </p>
+		  </div>
+		  
+		</div>
+      </div>
+
+    </section>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
